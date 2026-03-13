@@ -39,21 +39,12 @@ export const metadata: Metadata = {
     title: "Healthy&Fit — Track calories with just a photo",
     description:
       "AI-powered calorie tracker. Snap a photo, scan a barcode, or read a label. Instant calories, macros, and a personalized health score.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Healthy&Fit — AI-powered calorie tracker",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Healthy&Fit — Track calories with just a photo",
     description:
       "AI-powered calorie tracker. Snap a photo, scan a barcode, or read a label. Instant calories, macros, and a personalized health score.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
