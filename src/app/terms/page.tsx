@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Terms of Use — Healthy&Fit',
@@ -10,15 +11,9 @@ export const metadata: Metadata = {
 export default function TermsOfUse() {
   return (
     <main className="min-h-screen bg-white">
-      <nav className="border-b border-border-light">
-        <div className="max-w-3xl mx-auto px-6 h-16 flex items-center">
-          <Link href="/" className="text-lg font-extrabold text-ink tracking-tight">
-            Healthy<span className="text-grove">&amp;</span>Fit
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
-      <article className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+      <article className="max-w-3xl mx-auto px-6 pt-[104px] pb-16 md:pt-[120px] md:pb-24">
         <header className="mb-16">
           <p className="text-xs font-bold text-mist uppercase tracking-[0.2em] mb-4">Legal</p>
           <h1 className="text-3xl md:text-4xl font-extrabold text-ink leading-tight">Terms of Use</h1>

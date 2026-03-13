@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import AnimateIn from './AnimateIn';
 
 const featured = {
   text: "Before Healthy&Fit I constantly second-guessed every portion. Now I just snap a photo and move on with my day. I've lost 6 kg and I don't even feel like I'm dieting.",
   name: 'Camila R.',
   detail: 'Lost 6 kg',
+  avatar: '/testimonials/camila.jpg',
 };
 
 const others = [
@@ -11,16 +13,19 @@ const others = [
     text: "The AI plate scan takes a couple of seconds — I literally scan my lunch during break and I'm done.",
     name: 'Lucas M.',
     detail: 'Busy professional',
+    avatar: '/testimonials/lucas.jpg',
   },
   {
     text: "Healthy&Fit made tracking simple and stress-free. I actually enjoy seeing my Health Score improve.",
     name: 'Jordan P.',
     detail: 'First-time tracker',
+    avatar: '/testimonials/jordan.jpg',
   },
   {
     text: "I just scan what we're eating and the app handles everything. No time wasted counting.",
     name: 'Priya S.',
     detail: 'Busy parent',
+    avatar: '/testimonials/priya.jpg',
   },
 ];
 
@@ -40,9 +45,13 @@ export default function Testimonials() {
               &ldquo;{featured.text}&rdquo;
             </p>
             <footer className="mt-8 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-ink/5 flex items-center justify-center">
-                <span className="text-sm font-bold text-ink">{featured.name[0]}</span>
-              </div>
+              <Image
+                src={featured.avatar}
+                alt={featured.name}
+                width={44}
+                height={44}
+                className="w-11 h-11 rounded-full object-cover"
+              />
               <div>
                 <p className="font-bold text-sm text-ink">{featured.name}</p>
                 <p className="text-xs text-mist">{featured.detail}</p>
@@ -56,9 +65,18 @@ export default function Testimonials() {
             <AnimateIn key={t.name} delay={i * 80}>
               <blockquote>
                 <p className="text-mist leading-relaxed">&ldquo;{t.text}&rdquo;</p>
-                <footer className="mt-4">
-                  <p className="font-bold text-sm text-ink">{t.name}</p>
-                  <p className="text-xs text-mist">{t.detail}</p>
+                <footer className="mt-5 flex items-center gap-3">
+                  <Image
+                    src={t.avatar}
+                    alt={t.name}
+                    width={36}
+                    height={36}
+                    className="w-9 h-9 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="font-bold text-sm text-ink">{t.name}</p>
+                    <p className="text-xs text-mist">{t.detail}</p>
+                  </div>
                 </footer>
               </blockquote>
             </AnimateIn>

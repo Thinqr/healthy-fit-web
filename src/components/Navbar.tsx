@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const navLinks = [
   { label: 'Features', href: '#features' },
@@ -9,11 +11,14 @@ const navLinks = [
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: 'mailto:support@healthyandfit.app' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -26,6 +31,9 @@ export default function Navbar() {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const resolveHref = (href: string) =>
+    href.startsWith('#') && !isHome ? `/${href}` : href;
+
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
@@ -35,32 +43,53 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="flex items-center gap-2"
-        >
-          <span className="w-7 h-7 rounded-lg bg-grove flex items-center justify-center p-1">
-            <Image src="/logo.png" alt="Healthy&amp;Fit logo" width={18} height={18} className="invert" />
-          </span>
-          <span className="text-lg font-extrabold text-ink tracking-tight">
-            Healthy<span className="text-grove">&amp;</span>Fit
-          </span>
-        </a>
+        {isHome ? (
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center gap-2"
+          >
+            <span className="w-7 h-7 rounded-lg bg-grove flex items-center justify-center p-1">
+              <Image src="/logo.png" alt="Healthy&amp;Fit logo" width={18} height={18} className="invert" />
+            </span>
+            <span className="text-lg font-extrabold text-ink tracking-tight">
+              Healthy<span className="text-grove">&amp;</span>Fit
+            </span>
+          </a>
+        ) : (
+          <Link href="/" className="flex items-center gap-2">
+            <span className="w-7 h-7 rounded-lg bg-grove flex items-center justify-center p-1">
+              <Image src="/logo.png" alt="Healthy&amp;Fit logo" width={18} height={18} className="invert" />
+            </span>
+            <span className="text-lg font-extrabold text-ink tracking-tight">
+              Healthy<span className="text-grove">&amp;</span>Fit
+            </span>
+          </Link>
+        )}
 
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => scrollTo(link.href)}
-              className="text-sm text-mist hover:text-ink transition-colors cursor-pointer"
-            >
-              {link.label}
-            </button>
-          ))}
+          {navLinks.map((link) =>
+            isHome && link.href.startsWith('#') ? (
+              <button
+                key={link.href}
+                onClick={() => scrollTo(link.href)}
+                className="text-sm text-mist hover:text-ink transition-colors cursor-pointer"
+              >
+                {link.label}
+              </button>
+            ) : (
+              <a
+                key={link.href}
+                href={resolveHref(link.href)}
+                className="text-sm text-mist hover:text-ink transition-colors"
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </div>
 
         <div className="hidden lg:flex items-center gap-2">
@@ -104,15 +133,26 @@ export default function Navbar() {
         }`}
       >
         <div className="bg-white/95 backdrop-blur-xl border-t border-border-light px-6 py-5 space-y-1">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => scrollTo(link.href)}
-              className="block w-full text-left text-sm text-mist hover:text-ink py-2.5 transition-colors cursor-pointer"
-            >
-              {link.label}
-            </button>
-          ))}
+          {navLinks.map((link) =>
+            isHome && link.href.startsWith('#') ? (
+              <button
+                key={link.href}
+                onClick={() => scrollTo(link.href)}
+                className="block w-full text-left text-sm text-mist hover:text-ink py-2.5 transition-colors cursor-pointer"
+              >
+                {link.label}
+              </button>
+            ) : (
+              <a
+                key={link.href}
+                href={resolveHref(link.href)}
+                onClick={() => setOpen(false)}
+                className="block w-full text-left text-sm text-mist hover:text-ink py-2.5 transition-colors"
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <div className="flex gap-2 mt-3">
             <a href="#" onClick={() => setOpen(false)} className="flex-1 inline-flex items-center justify-center gap-2 bg-ink text-white px-4 py-2.5 rounded-lg">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">

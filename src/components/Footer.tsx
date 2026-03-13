@@ -81,11 +81,12 @@ export default function Footer() {
             <div>
               <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-4">Company</h4>
               <ul className="space-y-2">
-                {['Contact', 'Support'].map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-white/40 text-sm hover:text-white transition-colors">{l}</a>
-                  </li>
-                ))}
+                <li>
+                  <a href="mailto:support@healthyandfit.app" className="text-white/40 text-sm hover:text-white transition-colors">Contact</a>
+                </li>
+                <li>
+                  <a href="mailto:support@healthyandfit.app" className="text-white/40 text-sm hover:text-white transition-colors">Support</a>
+                </li>
               </ul>
             </div>
 
