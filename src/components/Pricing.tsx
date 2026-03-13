@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
 const monthlyFeatures = [
@@ -84,7 +85,7 @@ export default function Pricing() {
                 Start Your Free Trial
               </button>
               <p className="text-[11px] text-white/30 text-center mt-3">
-                Cancel anytime. Terms &amp; Privacy apply.
+                Cancel anytime. <Link href="/terms" className="underline hover:text-white/50">Terms</Link> &amp; <Link href="/privacy" className="underline hover:text-white/50">Privacy</Link> apply.
               </p>
             </div>
           </AnimateIn>

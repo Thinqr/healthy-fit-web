@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
 export default function Footer() {
@@ -51,7 +52,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-7 h-7 rounded-lg bg-grove flex items-center justify-center p-1">
-                  <Image src="/logo.png" alt="" width={18} height={18} className="invert" />
+                  <Image src="/logo.png" alt="Healthy&amp;Fit logo" width={18} height={18} className="invert" />
                 </span>
                 <span className="text-base font-extrabold text-white tracking-tight">
                   Healthy<span className="text-grove">&amp;</span>Fit
@@ -65,9 +66,13 @@ export default function Footer() {
             <div>
               <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-4">Legal</h4>
               <ul className="space-y-2">
-                {['Privacy Policy', 'Terms of Use', 'Manage Subscription'].map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-white/40 text-sm hover:text-white transition-colors">{l}</a>
+                {[
+                  { label: 'Privacy Policy', href: '/privacy' },
+                  { label: 'Terms of Use', href: '/terms' },
+                  { label: 'Manage Subscription', href: '/manage-subscription' },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="text-white/40 text-sm hover:text-white transition-colors">{l.label}</Link>
                   </li>
                 ))}
               </ul>

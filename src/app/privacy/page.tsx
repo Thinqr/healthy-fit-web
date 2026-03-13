@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy — Healthy&Fit',
   description: 'Learn how Healthy&Fit collects, uses, and protects your personal data.',
+  alternates: { canonical: '/privacy' },
 };
 
 export default function PrivacyPolicy() {
