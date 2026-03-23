@@ -138,7 +138,67 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2>14. Contact Us</h2>
+            <h2>14. Apple App Store Additional Terms</h2>
+            <p>
+              If you download the App from the Apple App Store, the following terms also apply:
+            </p>
+            <ul>
+              <li>
+                <span className="font-semibold text-ink">Acknowledgement:</span> These Terms are an agreement
+                between you and Healthy&amp;Fit only, not with Apple. Healthy&amp;Fit is solely responsible for
+                the App and its content.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Scope of License:</span> Your license to use the App is
+                non-transferable and limited to use on Apple-branded products that you own or control, as permitted
+                by the App Store Terms of Service and Apple&apos;s Usage Rules.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Maintenance and Support:</span> Healthy&amp;Fit is solely
+                responsible for providing maintenance and support services for the App, if any. Apple has no
+                obligation to furnish any maintenance or support services for the App.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Warranty:</span> To the extent not effectively disclaimed,
+                Healthy&amp;Fit is solely responsible for any product warranties, whether express or implied by law.
+                If the App fails to conform to an applicable warranty, you may notify Apple, and Apple may refund the
+                purchase price for the App to you as permitted by applicable law and Apple policy. To the maximum
+                extent permitted by law, Apple has no other warranty obligation with respect to the App.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Product Claims:</span> Healthy&amp;Fit, not Apple, is
+                responsible for addressing any claims by you or any third party relating to the App or your possession
+                and use of the App, including product liability claims, any claim that the App fails to conform to any
+                applicable legal or regulatory requirement, and claims arising under consumer protection, privacy, or
+                similar legislation.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Intellectual Property Claims:</span> In the event of any
+                third-party claim that the App or your possession and use of the App infringes that third party&apos;s
+                intellectual property rights, Healthy&amp;Fit, not Apple, is solely responsible for the investigation,
+                defense, settlement, and discharge of such intellectual property infringement claim.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Legal Compliance:</span> You represent and warrant that
+                (a) you are not located in a country that is subject to a U.S. Government embargo, or that has been
+                designated by the U.S. Government as a &quot;terrorist supporting&quot; country, and (b) you are not listed on
+                any U.S. Government list of prohibited or restricted parties.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Third-Party Terms:</span> You must comply with applicable
+                third-party agreement terms when using the App.
+              </li>
+              <li>
+                <span className="font-semibold text-ink">Third-Party Beneficiary:</span> Apple and Apple&apos;s
+                subsidiaries are third-party beneficiaries of these Terms as they relate to your license of the App.
+                Upon your acceptance of these Terms, Apple has the right (and is deemed to have accepted the right) to
+                enforce these Terms against you as a third-party beneficiary.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>15. Contact Us</h2>
             <p>If you have questions about these Terms, contact us at:</p>
             <p className="mt-2">
               <span className="font-semibold text-ink">Email:</span>{' '}
