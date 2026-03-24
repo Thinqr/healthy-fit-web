@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'Is Healthy&Fit free?',
-    a: 'You can download Healthy&Fit for free. The full experience — including AI scanning, personalized plans, and the AI Coach — is available with a subscription. Annual plans include a 3-day free trial.',
+    a: 'You can download Healthy&Fit for free. The full experience, including AI scanning, personalized plans, and the AI Coach, is available with a subscription. Annual plans include a 3-day free trial.',
   },
   {
     q: 'How is this different from MyFitnessPal?',
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     q: 'What types of food can the AI recognize?',
-    a: 'Virtually any meal — home-cooked dishes, restaurant plates, mixed bowls, individual snacks, drinks, and packaged foods. You can also scan barcodes or nutrition labels for precise data.',
+    a: 'Virtually any meal, including home-cooked dishes, restaurant plates, mixed bowls, individual snacks, drinks, and packaged foods. You can also scan barcodes or nutrition labels for precise data.',
   },
   {
     q: 'Does it work with dietary preferences?',
-    a: 'Yes. During onboarding, you choose your diet type — Classic, Pescatarian, Vegetarian, or Vegan — and your plan is tailored accordingly.',
+    a: 'Yes. During onboarding, you choose your diet type (Classic, Pescatarian, Vegetarian, or Vegan), and your plan is tailored accordingly.',
   },
   {
     q: 'Can I track my weight and see progress?',

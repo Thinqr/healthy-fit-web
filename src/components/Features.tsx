@@ -14,7 +14,7 @@ const features = [
   {
     label: 'AI Coach',
     title: 'Personal nutrition coach, 24/7',
-    desc: 'Real-time guidance, meal suggestions, and motivation — like having a nutritionist in your pocket.',
+    desc: 'Real-time guidance, meal suggestions, and motivation, like having a nutritionist in your pocket.',
   },
   {
     label: 'Smart Plans',
@@ -24,7 +24,7 @@ const features = [
   {
     label: 'Health Score',
     title: 'See how healthy your meals really are',
-    desc: "Every meal scored 0 to 10 — not just calories, but actual nutritional quality at a glance.",
+    desc: "Every meal is scored from 0 to 10, not just for calories, but for actual nutritional quality at a glance.",
   },
   {
     label: 'Progress',

@@ -11,7 +11,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://healthyandfit.app"),
-  title: "Healthy&Fit — Track calories with just a photo",
+  title: "Healthy&Fit | Track calories with just a photo",
   description:
     "AI-powered calorie tracker. Snap a photo of your plate, scan a barcode, or read a nutrition label. Get instant calories, macros, and a personalized health score.",
   keywords: [
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://healthyandfit.app",
     siteName: "Healthy&Fit",
-    title: "Healthy&Fit — Track calories with just a photo",
+    title: "Healthy&Fit | Track calories with just a photo",
     description:
       "AI-powered calorie tracker. Snap a photo, scan a barcode, or read a label. Instant calories, macros, and a personalized health score.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Healthy&Fit — Track calories with just a photo",
+    title: "Healthy&Fit | Track calories with just a photo",
     description:
       "AI-powered calorie tracker. Snap a photo, scan a barcode, or read a label. Instant calories, macros, and a personalized health score.",
   },

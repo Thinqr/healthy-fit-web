@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use — Healthy&Fit',
+  title: 'Terms of Use | Healthy&Fit',
   description: 'Read the terms and conditions for using the Healthy&Fit app and services.',
   alternates: { canonical: '/terms' },
 };
@@ -202,7 +202,7 @@ export default function TermsOfUse() {
             <p>If you have questions about these Terms, contact us at:</p>
             <p className="mt-2">
               <span className="font-semibold text-ink">Email:</span>{' '}
-              <a href="mailto:legal@healthyandfit.app" className="text-ink font-semibold hover:text-grove transition-colors">legal@healthyandfit.app</a>
+              <a href="mailto:team@thinqr.org" className="text-ink font-semibold hover:text-grove transition-colors">team@thinqr.org</a>
             </p>
           </section>
         </div>

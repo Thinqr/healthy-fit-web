@@ -22,7 +22,7 @@ export default function FeatureDeepDive() {
               <p className="text-xs font-bold text-mist uppercase tracking-[0.2em] mb-4">Dashboard</p>
               <h3 className="text-xl font-bold text-ink mb-5">Everything you need, one screen</h3>
               <p className="text-[15px] text-mist leading-relaxed">
-                Calories remaining, macro progress, fiber, sugar, sodium, water intake, and your Health Score — all updated in real time as you log meals throughout the day.
+                Calories remaining, macro progress, fiber, sugar, sodium, water intake, and your Health Score, all updated in real time as you log meals throughout the day.
               </p>
             </div>
           </AnimateIn>

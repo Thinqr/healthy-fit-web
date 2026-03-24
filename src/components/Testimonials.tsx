@@ -10,7 +10,7 @@ const featured = {
 
 const others = [
   {
-    text: "The AI plate scan takes a couple of seconds — I literally scan my lunch during break and I'm done.",
+    text: "The AI plate scan takes a couple of seconds, and I literally scan my lunch during break and I'm done.",
     name: 'Lucas M.',
     detail: 'Busy professional',
     avatar: '/testimonials/lucas.jpg',

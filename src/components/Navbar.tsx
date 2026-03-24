@@ -11,7 +11,7 @@ const navLinks = [
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: 'mailto:support@healthyandfit.app' },
+  { label: 'Contact', href: 'mailto:team@thinqr.org' },
 ];
 
 export default function Navbar() {
@@ -102,7 +102,7 @@ export default function Navbar() {
               <div className="text-xs font-bold leading-tight">App Store</div>
             </div>
           </a>
-          <a href="#" className="inline-flex items-center gap-2 bg-ink text-white px-3.5 py-2 rounded-lg hover:bg-ink/85 transition-colors">
+          <div className="inline-flex items-center gap-2 bg-ink text-white px-3.5 py-2 rounded-lg">
             <svg width="16" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M3.609 1.814a1.5 1.5 0 0 0-.609 1.2v17.972a1.5 1.5 0 0 0 .609 1.2l.096.058 10.08-10.08v-.228L3.705 1.756l-.096.058Z" fill="#4285F4" />
               <path d="M17.153 15.523l-3.368-3.36v-.227l3.368-3.36.076.044 3.99 2.267c1.14.647 1.14 1.705 0 2.352l-3.99 2.267-.076.017Z" fill="#FBBC04" />
@@ -110,10 +110,10 @@ export default function Navbar() {
               <path d="M17.229 8.494L5.304 1.764c-.698-.396-1.32-.347-1.695.05L13.785 12l3.444-3.506Z" fill="#34A853" />
             </svg>
             <div className="text-left">
-              <div className="text-[8px] leading-none opacity-70">Get it on</div>
+              <div className="text-[8px] leading-none opacity-70">Coming soon on</div>
               <div className="text-xs font-bold leading-tight">Google Play</div>
             </div>
-          </a>
+          </div>
         </div>
 
         <button
@@ -163,7 +163,7 @@ export default function Navbar() {
                 <div className="text-xs font-bold leading-tight">App Store</div>
               </div>
             </a>
-            <a href="#" onClick={() => setOpen(false)} className="flex-1 inline-flex items-center justify-center gap-2 bg-ink text-white px-4 py-2.5 rounded-lg">
+            <div className="flex-1 inline-flex items-center justify-center gap-2 bg-ink text-white px-4 py-2.5 rounded-lg">
               <svg width="16" height="18" viewBox="0 0 24 24" fill="none">
                 <path d="M3.609 1.814a1.5 1.5 0 0 0-.609 1.2v17.972a1.5 1.5 0 0 0 .609 1.2l.096.058 10.08-10.08v-.228L3.705 1.756l-.096.058Z" fill="#4285F4" />
                 <path d="M17.153 15.523l-3.368-3.36v-.227l3.368-3.36.076.044 3.99 2.267c1.14.647 1.14 1.705 0 2.352l-3.99 2.267-.076.017Z" fill="#FBBC04" />
@@ -171,10 +171,10 @@ export default function Navbar() {
                 <path d="M17.229 8.494L5.304 1.764c-.698-.396-1.32-.347-1.695.05L13.785 12l3.444-3.506Z" fill="#34A853" />
               </svg>
               <div className="text-left">
-                <div className="text-[8px] leading-none opacity-70">Get it on</div>
+                <div className="text-[8px] leading-none opacity-70">Coming soon on</div>
                 <div className="text-xs font-bold leading-tight">Google Play</div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>

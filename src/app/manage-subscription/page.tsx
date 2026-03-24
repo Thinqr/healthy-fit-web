@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Manage Subscription — Healthy&Fit',
+  title: 'Manage Subscription | Healthy&Fit',
   description: 'Learn how to manage, cancel, or update your Healthy&Fit subscription.',
   alternates: { canonical: '/manage-subscription' },
 };
@@ -98,7 +98,7 @@ export default function ManageSubscription() {
               </div>
               <div>
                 <h3 className="font-semibold text-ink mb-1">I cancelled but I&apos;m still being charged</h3>
-                <p>Make sure you cancelled through your App Store or Google Play settings, not just by deleting the app. If the issue persists, contact <a href="mailto:support@healthyandfit.app" className="font-semibold text-ink hover:text-grove transition-colors">support@healthyandfit.app</a>.</p>
+                <p>Make sure you cancelled through your App Store or Google Play settings, not just by deleting the app. If the issue persists, contact <a href="mailto:team@thinqr.org" className="font-semibold text-ink hover:text-grove transition-colors">team@thinqr.org</a>.</p>
               </div>
             </div>
           </section>
@@ -107,7 +107,7 @@ export default function ManageSubscription() {
             <h2 className="text-lg font-bold text-ink mb-2">Need help?</h2>
             <p>
               If you&apos;re having trouble managing your subscription, contact our support team at{' '}
-              <a href="mailto:support@healthyandfit.app" className="font-semibold text-ink hover:text-grove transition-colors">support@healthyandfit.app</a>{' '}
+              <a href="mailto:team@thinqr.org" className="font-semibold text-ink hover:text-grove transition-colors">team@thinqr.org</a>{' '}
               and we&apos;ll help you out.
             </p>
           </section>

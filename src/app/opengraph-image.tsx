@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Healthy&Fit — AI-powered calorie tracker';
+export const alt = 'Healthy&Fit, AI-powered calorie tracker';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

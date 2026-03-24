@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Healthy&Fit',
+  title: 'Privacy Policy | Healthy&Fit',
   description: 'Learn how Healthy&Fit collects, uses, and protects your personal data.',
   alternates: { canonical: '/privacy' },
 };
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
               <li>Withdraw consent at any time where processing is based on consent.</li>
             </ul>
             <p className="mt-4">
-              To exercise these rights, contact us at <a href="mailto:privacy@healthyandfit.app" className="text-ink font-semibold hover:text-grove transition-colors">privacy@healthyandfit.app</a>.
+              To exercise these rights, contact us at <a href="mailto:team@thinqr.org" className="text-ink font-semibold hover:text-grove transition-colors">team@thinqr.org</a>.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ export default function PrivacyPolicy() {
             <p>If you have questions about this Privacy Policy, contact us at:</p>
             <p className="mt-2">
               <span className="font-semibold text-ink">Email:</span>{' '}
-              <a href="mailto:privacy@healthyandfit.app" className="text-ink font-semibold hover:text-grove transition-colors">privacy@healthyandfit.app</a>
+              <a href="mailto:team@thinqr.org" className="text-ink font-semibold hover:text-grove transition-colors">team@thinqr.org</a>
             </p>
           </section>
         </div>
