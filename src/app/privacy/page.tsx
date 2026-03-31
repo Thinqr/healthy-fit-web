@@ -32,10 +32,10 @@ export default function PrivacyPolicy() {
             <h2>2. Information We Collect</h2>
             <h3>Information you provide</h3>
             <ul>
-              <li><span className="font-semibold text-ink">Account information:</span> name, email address, date of birth, gender, and password when you create an account.</li>
+              <li><span className="font-semibold text-ink">Account information:</span> name, email address, date of birth, and gender. Passwords are handled securely by our authentication provider.</li>
               <li><span className="font-semibold text-ink">Health and fitness data:</span> height, weight, activity level, dietary preferences, health goals, and food logs.</li>
-              <li><span className="font-semibold text-ink">Photos:</span> images of meals you scan using our AI food recognition feature. These images are processed to identify food items and estimate nutritional content.</li>
-              <li><span className="font-semibold text-ink">Payment information:</span> processed securely through Apple App Store or Google Play Store. We do not store your payment card details.</li>
+              <li><span className="font-semibold text-ink">Photos:</span> images of meals you scan using our AI food recognition feature. We upload these images to our servers for processing and may store the photo and associated recognition results to provide your scan history and allow you to edit or delete scans.</li>
+              <li><span className="font-semibold text-ink">Payment information:</span> processed securely through Apple App Store or Google Play Store. We do not store your payment card details. Subscription entitlements are managed via RevenueCat.</li>
             </ul>
 
             <h3 className="mt-6">Information collected automatically</h3>
@@ -65,6 +65,8 @@ export default function PrivacyPolicy() {
             <p>We do not sell your personal data. We may share your information with:</p>
             <ul>
               <li><span className="font-semibold text-ink">Service providers:</span> trusted third parties who assist us in operating the Service (cloud hosting, analytics, customer support).</li>
+              <li><span className="font-semibold text-ink">Analytics providers:</span> including PostHog, to help us understand how the Service is used.</li>
+              <li><span className="font-semibold text-ink">Authentication & subscription providers:</span> including Clerk and RevenueCat, to manage accounts and subscriptions.</li>
               <li><span className="font-semibold text-ink">Legal requirements:</span> when required by law, regulation, or legal process.</li>
               <li><span className="font-semibold text-ink">Business transfers:</span> in connection with a merger, acquisition, or sale of assets.</li>
             </ul>
@@ -73,7 +75,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2>5. Data Retention</h2>
             <p>
-              We retain your personal data for as long as your account is active or as needed to provide the Service. Meal photos are processed in real time and are not stored on our servers after nutritional analysis is complete, unless you choose to save them in your food log.
+              We retain your personal data for as long as your account is active or as needed to provide the Service. Meal scan photos and associated recognition results may be stored to provide your food log and recognition history. You can delete scans in the app; after deletion, associated data is removed from your account as permitted by our retention and backup policies.
             </p>
           </section>
 
