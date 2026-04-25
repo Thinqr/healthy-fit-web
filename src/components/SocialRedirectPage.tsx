@@ -1,7 +1,7 @@
 "use client";
 
 import posthog from "posthog-js";
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
 type SocialSource = "instagram" | "tiktok";
@@ -35,7 +35,7 @@ function resolveDestination(userAgent: string) {
   return IOS_APP_STORE_URL;
 }
 
-export default function SocialRedirectPage({ source }: SocialRedirectPageProps) {
+function SocialRedirectContent({ source }: SocialRedirectPageProps) {
   const searchParams = useSearchParams();
   const hasProcessed = useRef(false);
 
@@ -103,5 +103,26 @@ export default function SocialRedirectPage({ source }: SocialRedirectPageProps) 
         </p>
       </div>
     </main>
+  );
+}
+
+const redirectFallback = (
+  <main className="min-h-screen bg-white flex items-center justify-center px-6">
+    <div className="text-center max-w-md">
+      <h1 className="text-2xl font-extrabold text-ink tracking-tight">
+        Redirecting you to Healthy&Fit...
+      </h1>
+      <p className="text-mist mt-3">
+        If nothing happens in a moment, please refresh this page.
+      </p>
+    </div>
+  </main>
+);
+
+export default function SocialRedirectPage({ source }: SocialRedirectPageProps) {
+  return (
+    <Suspense fallback={redirectFallback}>
+      <SocialRedirectContent source={source} />
+    </Suspense>
   );
 }
