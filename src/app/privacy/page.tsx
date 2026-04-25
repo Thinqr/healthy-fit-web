@@ -65,7 +65,6 @@ export default function PrivacyPolicy() {
             <p>We do not sell your personal data. We may share your information with:</p>
             <ul>
               <li><span className="font-semibold text-ink">Service providers:</span> trusted third parties who assist us in operating the Service (cloud hosting, analytics, customer support).</li>
-              <li><span className="font-semibold text-ink">Analytics providers:</span> including PostHog, to help us understand how the Service is used.</li>
               <li><span className="font-semibold text-ink">Authentication & subscription providers:</span> including Clerk and RevenueCat, to manage accounts and subscriptions.</li>
               <li><span className="font-semibold text-ink">Legal requirements:</span> when required by law, regulation, or legal process.</li>
               <li><span className="font-semibold text-ink">Business transfers:</span> in connection with a merger, acquisition, or sale of assets.</li>

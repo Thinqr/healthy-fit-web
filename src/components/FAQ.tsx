@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import AnimateIn from './AnimateIn';
+import posthog from 'posthog-js';
 
 const faqs = [
   {
@@ -58,7 +59,13 @@ export default function FAQ() {
             <AnimateIn key={i} delay={i * 40}>
               <div className="border-t border-border-light last:border-b">
                 <button
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  onClick={() => {
+                    const isOpening = openIndex !== i;
+                    setOpenIndex(isOpening ? i : null);
+                    if (isOpening) {
+                      posthog.capture('faq_question_expanded', { question: faq.q, question_index: i });
+                    }
+                  }}
                   className="w-full flex items-center justify-between py-5 text-left cursor-pointer group"
                 >
                   <span className="font-semibold text-ink pr-8 group-hover:text-grove transition-colors">{faq.q}</span>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import { ManageSubscriptionTracker, PlatformSubscriptionLink } from '@/components/ManageSubscriptionTracker';
 
 export const metadata: Metadata = {
   title: 'Manage Subscription | Healthy&Fit',
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function ManageSubscription() {
   return (
     <main className="min-h-screen bg-white">
+      <ManageSubscriptionTracker />
       <Navbar />
 
       <article className="max-w-3xl mx-auto px-6 pt-[104px] pb-16 md:pt-[120px] md:pb-24">
@@ -43,14 +45,13 @@ export default function ManageSubscription() {
                 <li>Find <span className="font-semibold text-ink">Healthy&amp;Fit</span> and tap it.</li>
                 <li>Choose a different plan or tap <span className="font-semibold text-ink">Cancel Subscription</span>.</li>
               </ol>
-              <a
+              <PlatformSubscriptionLink
                 href="https://apps.apple.com/account/subscriptions"
-                target="_blank"
-                rel="noopener noreferrer"
+                platform="app_store"
                 className="inline-block mt-6 text-sm font-semibold text-ink hover:text-grove transition-colors"
               >
                 Open App Store subscriptions &rarr;
-              </a>
+              </PlatformSubscriptionLink>
             </div>
 
             <div className="rounded-xl border border-border-light p-8">
@@ -70,14 +71,13 @@ export default function ManageSubscription() {
                 <li>Find <span className="font-semibold text-ink">Healthy&amp;Fit</span> and tap it.</li>
                 <li>Choose a different plan or tap <span className="font-semibold text-ink">Cancel subscription</span>.</li>
               </ol>
-              <a
+              <PlatformSubscriptionLink
                 href="https://play.google.com/store/account/subscriptions"
-                target="_blank"
-                rel="noopener noreferrer"
+                platform="google_play"
                 className="inline-block mt-6 text-sm font-semibold text-ink hover:text-grove transition-colors"
               >
                 Open Google Play subscriptions &rarr;
-              </a>
+              </PlatformSubscriptionLink>
             </div>
           </section>
 

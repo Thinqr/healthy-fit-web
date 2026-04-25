@@ -1,4 +1,8 @@
+'use client';
+
 import Image from "next/image";
+
+const APP_STORE_URL = "https://apps.apple.com/app/id6760506169";
 
 function StarIcon() {
   return (
@@ -29,7 +33,9 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3 mt-10">
               <a
-                href="#"
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-ink text-white px-5 py-3 rounded-xl hover:bg-ink/85 transition-colors"
               >
                 <svg

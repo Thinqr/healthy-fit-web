@@ -1,6 +1,10 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import AnimateIn from "./AnimateIn";
+
+const APP_STORE_URL = "https://apps.apple.com/app/id6760506169";
 
 export default function Footer() {
   return (
@@ -21,7 +25,9 @@ export default function Footer() {
           <AnimateIn delay={150}>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
               <a
-                href="#"
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-white text-ink px-6 py-3.5 rounded-xl hover:bg-white/90 transition-colors"
               >
                 <svg
@@ -152,7 +158,9 @@ export default function Footer() {
               </h4>
               <div className="flex gap-2">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/healthyandfit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 rounded-md bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
                   aria-label="Instagram"
                 >
@@ -167,7 +175,9 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@healthyandfit.app0?_r=1&_t=ZP-95q54azmq47"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 rounded-md bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
                   aria-label="TikTok"
                 >

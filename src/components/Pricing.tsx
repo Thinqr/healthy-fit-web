@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import AnimateIn from './AnimateIn';
+import posthog from 'posthog-js';
 
 const monthlyFeatures = [
   'AI food scanning (photo, barcode, label)',
@@ -53,7 +56,10 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-8 w-full py-3 rounded-lg border-2 border-ink text-ink text-sm font-bold hover:bg-ink hover:text-white transition-colors cursor-pointer">
+              <button
+                onClick={() => posthog.capture('pricing_plan_clicked', { plan: 'monthly', price_usd: 11.99 })}
+                className="mt-8 w-full py-3 rounded-lg border-2 border-ink text-ink text-sm font-bold hover:bg-ink hover:text-white transition-colors cursor-pointer"
+              >
                 Get Monthly
               </button>
             </div>
@@ -81,7 +87,10 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <button className="mt-8 w-full py-3 rounded-lg bg-grove hover:bg-coral-dark text-white text-sm font-bold transition-colors cursor-pointer">
+              <button
+                onClick={() => posthog.capture('pricing_plan_clicked', { plan: 'annual', price_usd: 59.99, has_free_trial: true })}
+                className="mt-8 w-full py-3 rounded-lg bg-grove hover:bg-coral-dark text-white text-sm font-bold transition-colors cursor-pointer"
+              >
                 Start Your Free Trial
               </button>
               <p className="text-[11px] text-white/30 text-center mt-3">
